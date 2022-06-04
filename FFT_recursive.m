@@ -10,9 +10,9 @@ else
     Xe = FFT_recursive(x(1:2:N));             % compute even part
     Xo = FFT_recursive(x(2:2:N));             % compute odd part
     
-    factor = exp(-2j*pi*n/N);       % compute multiplication factors  
+    factor = exp(-2j*pi*n/N)';       % compute multiplication factors  
 
-    X = [Xe+factor(1:N/2).*Xo Xe+factor(N/2+1:N).*Xo];
+    X = [Xe+factor(1:N/2).*Xo; Xe+factor(N/2+1:N).*Xo];
     
 end
 

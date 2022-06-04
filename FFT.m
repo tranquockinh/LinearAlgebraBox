@@ -4,7 +4,7 @@ function X  = FFT(x)
     n = 1:N; 
     even = n(1:2:N); 
     odd = n(2:2:N);
-    X = zeros(1, N);
+    X = zeros(N,1);
     for j = 1:N
 
         fft_even = x(even)*exp(-2j*pi*(j-1)*(even-1)'/N);
